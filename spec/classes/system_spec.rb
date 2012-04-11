@@ -12,8 +12,8 @@ describe 'env::system' do
     })
   end
 
-  it 'should create /etc/profile.d/hist_timestamp.sh' do
-    should contain_file('/etc/profile.d/hist_timestamp.sh').with({
+  it 'should create /etc/profile.d/bash_hist.sh' do
+    should contain_file('/etc/profile.d/bash_hist.sh').with({
       'ensure' => 'present',
     })
   end
