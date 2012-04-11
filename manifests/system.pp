@@ -4,9 +4,9 @@ class env::system {
     ensure => directory,
   }
 
-  file { '/etc/profile.d/hist_timestamp.sh':
+  file { '/etc/profile.d/bash_hist.sh':
     ensure  => present,
-    source  => "puppet:///modules/${module_name}/hist_timestamp.sh",
+    source  => "puppet:///modules/${module_name}/bash_hist.sh",
     require => File['/etc/profile.d'],
   }
 

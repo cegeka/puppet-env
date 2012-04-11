@@ -1,1 +1,0 @@
-export HISTTIMEFORMAT='%F %T '
