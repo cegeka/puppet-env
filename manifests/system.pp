@@ -10,4 +10,11 @@ class env::system {
     require => File['/etc/profile.d'],
   }
 
+  file { '/etc/profile.d/cegekaci.sh':
+    ensure  => 'file',
+    content => 'export CEGEKACI=$(grep "hinumber" /etc/facts | cut -d "=" -f 2)',
+    mode    => '0644',
+    require => File['/etc/profile.d'],
+  }
+
 }
