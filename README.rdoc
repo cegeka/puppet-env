@@ -1,5 +1,5 @@
 = puppet-env module
 
-{<img src='https://codex.cegeka.be/jenkins/job/puppet-env/badge/icon' />}[https://codex.cegeka.be/jenkins/job/puppet-env/]
+{<img src='https://jenkins-iac.cegeka.be/job/puppet-env/badge/icon' />}[https://jenkins-iac.cegeka.be/job/puppet-env/]
 
 This is the env module.
