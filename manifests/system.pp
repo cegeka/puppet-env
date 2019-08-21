@@ -9,12 +9,13 @@ class env::system {
     source  => "puppet:///modules/${module_name}/bash_hist.sh",
     require => File['/etc/profile.d'],
   }
-
-  file { '/etc/profile.d/cegekaci.sh':
-    ensure  => 'file',
-    content => 'export CEGEKACI=$(grep "hinumber" /etc/facts | cut -d "=" -f 2)',
-    mode    => '0644',
-    require => File['/etc/profile.d'],
+  if ! $::vagrant {
+    file { '/etc/profile.d/cegekaci.sh':
+      ensure  => 'file',
+      content => 'export CEGEKACI=$(grep "hinumber" /etc/facts | cut -d "=" -f 2)',
+      mode    => '0644',
+      require => File['/etc/profile.d'],
+    }
   }
 
 }
